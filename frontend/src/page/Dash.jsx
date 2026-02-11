@@ -6,6 +6,8 @@ import LeadDetailModal from '../components/LeadDetailModal';
 import './Dash.css';
 import axios from 'axios'
 
+const API = import.meta.env.VITE_API_URL;
+
 export default function Dash() {
   const [leads, setLeads] = useState([]);
   const [selectedLead, setSelectedLead] = useState(null);
@@ -21,12 +23,12 @@ export default function Dash() {
   };
 
 
-   const API_URL = "http://localhost:5000/leads";
+  
 
 
   const fetchLeads = async () => {
     try {
-      const response = await axios.get(API_URL);
+      const response = await axios.get(`${API}/leads`);
       setLeads(response.data);
       console.log(response.data)
     } catch (error) {

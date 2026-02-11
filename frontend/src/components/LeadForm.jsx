@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import './LeadForm.css';
 import axios from "axios"
+const API = import.meta.env.VITE_API_URL;
 
 
 export default function LeadForm({ onSubmit }) {
@@ -69,7 +70,7 @@ export default function LeadForm({ onSubmit }) {
 
     try {
         
-      await axios.post("http://localhost:5000/leads/", formData);
+      await axios.post(`${API}/leads/`, formData);
       // setMessage("Lead submitted successfully!");
     
       onSubmit(formData);
