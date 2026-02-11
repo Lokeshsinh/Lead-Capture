@@ -9,20 +9,7 @@ const leadRouter =  require("./router/leads")
 
 const app =  express();
 app.use(express.json());
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://lead-captures.vercel.app"
-];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  }
-}));
+app.use(cors());
 
 const PROT  =  5000
 
