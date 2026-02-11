@@ -1,0 +1,21 @@
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #f2f2f2;
+  color: #000;
+}
+
+.nav-link-active {
+  background-color: #2563eb;
+  color: white;
+}
+
+.nav-link-pending {
+  opacity: 0.6;
+}
