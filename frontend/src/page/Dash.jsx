@@ -33,9 +33,7 @@ export default function Dash() {
       console.log(response.data)
     } catch (error) {
       console.error("Error fetching leads:", error);
-    } finally {
-      setLoading(false);
-    }
+    } 
   };
 
   useEffect(() => {
